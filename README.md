@@ -17,4 +17,4 @@ Andres F. Parra
 
 ## Wireframes
 
-En esta[https://github.com/AndresParra01/PlataformasDePE/tree/master/wireframes] seccion se encuentran los wireframes 
+En esta:[https://github.com/AndresParra01/PlataformasDePE/tree/master/wireframes] seccion se encuentran los wireframes 
