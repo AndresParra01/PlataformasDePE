@@ -1,6 +1,6 @@
 # Micrositio
 
-Descripcion . . . .
+Esta es una pagina web con galeria para plataformas de programacion empresarial
 
 ## Autor
 
