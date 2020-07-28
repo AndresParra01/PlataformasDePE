@@ -5,7 +5,7 @@ Esta es una pagina web con galeria para plataformas de programacion empresarial
 ## Autor
 
 Andres F. Parra
-//Inserte red
+https://www.linkedin.com/feed/
 
 ## Secciones
 
