@@ -6,7 +6,7 @@ Esta es una pagina web con galeria para plataformas de programacion empresarial
 
 Andres F. Parra
 
-https://www.linkedin.com/feed/
+https://www.linkedin.com/in/andrés-felipe-parra-sierra-ab6597191/
 
 ## Secciones
 
