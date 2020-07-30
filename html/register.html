@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <title>Register</title>
+      <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+      <link rel="stylesheet" href="../css/main.css">
+   </head>
+   <body>
+      <form class="formulario" method="POST" action="content.html">
+         <body background="../img/fondomain.jpg">
+            <h1>Registrate</h1>
+            <div class="contenedor">
+               <div class="input-contenedor">
+                  <i class="fas fa-user icon"></i>
+                  <input type="text" placeholder="Nombre Completo" required pattern="[A-Za-z]+" minlength="8" maxlength="25">
+               </div>
+               <div class="input-contenedor">
+                  <i class="fas fa-map-marked-alt icon"></i>
+                  <select name="departamento" id="departamento" onchange="cargarCiudades();">
+                     <option value="">Seleccione un departamento</option>
+                  </select>
+               </div>
+               <div class="input-contenedor">
+                  <i class="fas fa-map-marker-alt icon"></i>
+                  <select name="ciudad" id="ciudad">
+                     <option value="">Seleccione una ciudad</option>
+                  </select>
+               </div>
+               <div class="input-contenedor">
+                  <i class="fas fa-mobile-alt icon"></i>
+                  <input type="tel" placeholder="Numero celular" required pattern="[0-9]+" minlength="10" maxlength="12">  
+               </div>
+               <div class="input-contenedor">
+                  <i class="fas fa-envelope icon"></i>
+                  <input type="email" id="usuario" placeholder="Correo Electronico" required minlength="10" maxlength="25">
+               </div>
+               <div class="input-contenedor">
+                  <i class="fas fa-key icon"></i>
+                  <input type="password" id="contrasena" placeholder="Contraseña" required pattern="[A-Za-Z-0-9]+" minlength="5">
+               </div>
+               <input type="submit" value="Registrate" class="button">
+               <p>Al registrarte, aceptas ser espiado.</p>
+               <p>¿Ya tienes una cuenta?<a class="link" href="login.html"> Iniciar Sesion</a></p>
+            </div>
+      </form>
+      <script src="../js/main.js"></script>
+   </body>
+</html>

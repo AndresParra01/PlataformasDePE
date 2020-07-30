@@ -19,3 +19,5 @@ https://www.linkedin.com/in/andrés-felipe-parra-sierra-ab6597191/
 ## Wireframes
 
 En esta:[https://github.com/AndresParra01/PlataformasDePE/tree/master/wireframes] seccion se encuentran los wireframes 
+
+<!-- //Agradecimientos a https://es.stackoverflow.com/questions/71985/cargar-un-select-dependiendo-de-otro-select-javascript-dom -->

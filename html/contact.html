@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <title>Contact</title>
+      <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+      <link rel="stylesheet" href="../css/main.css">
+   </head>
+   <body>
+      <form class="formulario" method="POST" action="galery.html">
+         <body background="../img/fondomain.jpg">
+            <h1>Contacta con nosotros</h1>
+            <div class="contenedor">
+               <div class="input-contenedor">
+                  <i class="fas fa-envelope-open-text icon"></i>
+                  <input type="text" placeholder="Asunto" required pattern="[A-Za-z]+" minlength="8" maxlength="">
+               </div>
+               <div class="input-contenedor">
+                  <i class="far fa-keyboard icon2"></i>
+                  <textarea type="text" placeholder="Mensaje" required pattern="[A-Za-Z-0-9]+" minlength="5"></textarea>
+               </div>
+               <input type="submit" value="Enviar" class="button">
+               <p>Te responderemos de ser posible, en un plazo de 48 horas</p>
+               <p><a class="link" href="galery.html">Regresar</a></p>
+            </div>
+      </form>
+   </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <title>Login</title>
+      <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+      <link rel="stylesheet" href="../css/main.css">
+   </head>
+   <body>
+      <form class="formulario" method="POST" action="content.html">
+         <body background="../img/fondomain.jpg">
+            <h1>Login</h1>
+            <div class="contenedor">
+               <div class="input-contenedor">
+                  <i class="fas fa-envelope icon"></i>
+                  <input type="email" id="usuariologin" placeholder="Correo Electronico" required minlength="10" maxlength="25">
+               </div>
+               <div class="input-contenedor">
+                  <i class="fas fa-key icon"></i>
+                  <input type="password" id="contrasenalogin" placeholder="Contraseña" required pattern="[A-Za-Z-0-9]+" minlength="5">
+               </div>
+            </div>
+            <input type="submit" value="Iniciar sesion" class="button">
+            <p>Al iniciar sesión ya has aceptado ser espiado.</p>
+            <p>¿No tienes una cuenta? <a class="link" href="register.html">Registrate </a></p>
+            </div>
+      </form>
+   </body>
+</html>

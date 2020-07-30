@@ -1,73 +1,130 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background-size: cover;
-    background-attachment: fixed;
-}
-*{
-    box-sizing: border-box;
-}
-.contenedor{
-    width: 100%;
-    padding: 15px;
-}
-.formulario{
-    background: #fff;
-    margin-top: 150px;
-    padding: 3px;
-}
-h1{
-    text-align: center;
-    color: #1a2537;
-    font-size: 40px;
-}
-input[type="text"], select, input[type="tel"], input[type="email"], input[type="password"]{
-    font-size: 20px;
-    width: 82%;
-    padding: 10px;
-    border: none;
-}
-.input-contenedor{
-    margin-bottom: 15px;
-    border: 1px solid #aaa;
-}
-.icon{
-    min-width: 50px;
-    text-align: center;
-    color: #999;
-}
-.button{
-    border: none;
-    width: 100%;
-    color: white;
-    font-size: 20px;
-    background:  #1a2537;
-    padding: 15px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
-.button:hover{
-    background: cadetblue;
+* {
+	box-sizing: border-box;
 }
 
-p{
-    text-align: center;
+.contenedor {
+	width: 100%;
+	padding: 15px;
 }
-.link{
-    text-decoration: none;
-      color: #1a2537;
-    font-weight: 600;
+
+.formulario,
+.inicio,
+.contenido {
+	background: #fff;
+	margin-top: 150px;
+	padding: 3px;
 }
-.link:hover{
-     color: cadetblue;
+
+h1 {
+	text-align: center;
+	color: #1a2537;
+	font-size: 40px;
 }
-@media(min-width:768px)
-{
-    .formulario{
-        margin: auto;
-        width: 500px;
-        margin-top: 50px;
-        border-radius: 2%;
-    }
+
+h2 {
+	text-align: center;
+	color: #1a2537;
+	font-size: 20px;
+}
+
+input[type="text"],
+select,
+textarea,
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+	font-size: 20px;
+	width: 82%;
+	padding: 10px;
+	border: none;
+}
+
+.input-contenedor {
+	margin-bottom: 15px;
+	border: 1px solid #aaa;
+}
+
+.icon {
+	min-width: 50px;
+	text-align: center;
+	color: #999;
+}
+
+.icon2 {
+	margin-top: 15px;
+	min-width: 50px;
+	text-align: center;
+	vertical-align: top;
+	color: #999;
+}
+
+.button {
+	border: none;
+	width: 100%;
+	color: white;
+	font-size: 20px;
+	background: #1a2537;
+	padding: 15px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background: cadetblue;
+}
+
+p {
+	text-align: center;
+}
+
+.link {
+	text-decoration: none;
+	color: #1a2537;
+	font-weight: 600;
+}
+
+.link:hover {
+	color: cadetblue;
+}
+
+@media(min-width:768px) {
+	.formulario {
+		margin: auto;
+		width: 500px;
+		margin-top: 50px;
+		border-radius: 2%;
+	}
+}
+
+
+/* galery */
+
+#content {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#content-img {
+	width: 300px;
+	margin: auto;
+	margin: 10px;
+	text-align: center;
+	margin-top: 10px;
+	background: #45375e;
+}
+
+#img {
+	width: 100%;
+}
+
+#content-img>label {
+	font-size: 18px;
 }
