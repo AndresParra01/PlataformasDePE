@@ -35,7 +35,6 @@ h2 {
 }
 
 input[type="text"],
-select,
 textarea,
 input[type="tel"],
 input[type="email"],
@@ -44,6 +43,13 @@ input[type="password"] {
 	width: 82%;
 	padding: 10px;
 	border: none;
+}
+
+select {
+	font-size: 20px;
+	width: 82%;
+	padding: 10px;
+    	border: 1px solid #FFFFFF !important;
 }
 
 .input-contenedor {

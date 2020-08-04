@@ -1,4 +1,14 @@
-var array = ["Amazonas", "Antioquia", "Arauca", "Atlantico", "Bolivar", "Boyaca", "Caldas", "Caqueta", "Casanare", "Cauca", "Cesar", "Choco", "Cundinamarca", "Cordoba", "Guainia", "Guaviare", "Huila", "La Guajira", "Magdalena", "Meta", "Nariño", "Norte de Santander", "Putumayo", "Quindio", "Risaralda", "San Andres y Providencia", "Santander", "Sucre", "Tolima", "Valle del Cauca", "Vaupes", "Vichada"];
+function cargarlogin() {
+	const form = document.getElementById('form-login');
+
+	form.addEventListener('submit', function (event) {
+		event.preventDefault();
+		Verificar();
+	});
+
+}
+
+var array = ["Amazonas", "Antioquia", "Arauca", "Atlantico", "Bolivar", "Boyaca", "Caldas", "Caqueta", "Casanare", "Cauca", "Cesar", "Choco", "Cundinamarca", "Cordoba", "Guainia", "Guajira", "Guaviare", "Huila", "Magdalena", "Meta", "Nariño", "Norte_de_Santander", "Putumayo", "Quindio", "Risaralda", "San_Andres_y_Providencia", "Santander", "Sucre", "Tolima", "Valle_del_Cauca", "Vaupes", "Vichada"];
 
 var listaCiudades = {
 	amazonas: [ "Leticia", "Puerto Nari\u00f1o" ],
@@ -16,26 +26,24 @@ var listaCiudades = {
 	cundinamarca: [ "Agua de Dios", "Alb\u00e1n", "Anapoima", "Anolaima", "Apulo", "Arbel\u00e1ez", "Beltr\u00e1n", "Bituima", "Bogot\u00e1", "Bojac\u00e1", "Cabrera", "Cachipay", "Cajic\u00e1", "Caparrap\u00ed", "C\u00e1queza", "Carmen de Carupa", "Chaguan\u00ed", "Ch\u00eda", "Chipaque", "Choach\u00ed", "Chocont\u00e1", "Cogua", "Cota", "Cucunub\u00e1", "El Colegio", "El Pe\u00f1\u00f3n", "El Rosal", "Facatativ\u00e1", "F\u00f3meque", "Fosca", "Funza", "F\u00faquene", "Fusagasug\u00e1", "Gachal\u00e1", "Gachancip\u00e1", "Gachet\u00e1", "Gama", "Girardot", "Granada", "Guachet\u00e1", "Guaduas", "Guasca", "Guataqu\u00ed", "Guatavita", "Guayabal de S\u00edquima", "Guayabetal", "Guti\u00e9rrez", "Jerusal\u00e9n", "Jun\u00edn", "La Calera", "La Mesa", "La Palma", "La Pe\u00f1a", "La Vega", "Lenguazaque", "Machet\u00e1", "Madrid", "Manta", "Medina", "Mosquera", "Nari\u00f1o", "Nemoc\u00f3n", "Nilo", "Nimaima", "Nocaima", "Pacho", "Paime", "Pandi", "Paratebueno", "Pasca", "Puerto Salgar", "Pul\u00ed", "Quebradanegra", "Quetame", "Quipile", "Ricaurte", "San Antonio del Tequendama", "San Bernardo", "San Cayetano", "San Francisco", "San Juan de Rioseco", "Sasaima", "Sesquil\u00e9", "Sibat\u00e9", "Silvania", "Simijaca", "Soacha", "Sop\u00f3", "Subachoque", "Suesca", "Supat\u00e1", "Susa", "Sutatausa", "Tabio", "Tausa", "Tena", "Tenjo", "Tibacuy", "Tibirita", "Tocaima", "Tocancip\u00e1", "Topaip\u00ed", "Ubal\u00e1", "Ubaque", "Ubat\u00e9", "Une", "\u00datica", "Venecia", "Vergara", "Vian\u00ed", "Villag\u00f3mez", "Villapinz\u00f3n", "Villeta", "Viot\u00e1", "Yacop\u00ed", "Zipac\u00f3n", "Zipaquir\u00e1" ],
 	cordoba: [ "Ayapel", "Buenavista", "Canalete", "Ceret\u00e9", "Chim\u00e1", "Chin\u00fa", "Ci\u00e9naga de Oro", "Cotorra", "La Apartada", "Lorica", "Los C\u00f3rdobas", "Momil", "Montel\u00edbano", "Monter\u00eda", "Mo\u00f1itos", "Planeta Rica", "Pueblo Nuevo", "Puerto Escondido", "Puerto Libertador", "Pur\u00edsima", "Sahag\u00fan", "San Andr\u00e9s de Sotavento", "San Antero", "San Bernardo del Viento", "San Carlos", "San Jos\u00e9 de Ur\u00e9", "San Pelayo", "Tierralta", "Tuch\u00edn", "Valencia" ],
 	guainia: [ "In\u00edrida" ],
+	guajira: [ "Albania", "Barrancas", "Dibulla", "Distracci\u00f3n", "El Molino", "Fonseca", "Hatonuevo", "La Jagua del Pilar", "Maicao", "Manaure", "Riohacha", "San Juan del Cesar", "Uribia", "Urumita", "Villanueva" ],
 	guaviare: [ "Calamar", "El Retorno", "Miraflores", "San Jos\u00e9 del Guaviare" ],
 	huila: [ "Acevedo", "Agrado", "Aipe", "Algeciras", "Altamira", "Baraya", "Campoalegre", "Colombia", "El Pital", "El\u00edas", "Garz\u00f3n", "Gigante", "Guadalupe", "Hobo", "\u00cdquira", "Isnos", "La Argentina", "La Plata", "N\u00e1taga", "Neiva", "Oporapa", "Paicol", "Palermo", "Palestina", "Pitalito", "Rivera", "Saladoblanco", "San Agust\u00edn", "Santa Mar\u00eda", "Suaza", "Tarqui", "Tello", "Teruel", "Tesalia", "Timan\u00e1", "Villavieja", "Yaguar\u00e1" ],
-	la guajira: [ "Albania", "Barrancas", "Dibulla", "Distracci\u00f3n", "El Molino", "Fonseca", "Hatonuevo", "La Jagua del Pilar", "Maicao", "Manaure", "Riohacha", "San Juan del Cesar", "Uribia", "Urumita", "Villanueva" ],
 	magdalena: [ "Algarrobo", "Aracataca", "Ariguan\u00ed", "Cerro de San Antonio", "Chibolo", "Chibolo", "Ci\u00e9naga", "Concordia", "El Banco", "El Pi\u00f1\u00f3n", "El Ret\u00e9n", "Fundaci\u00f3n", "Guamal", "Nueva Granada", "Pedraza", "Piji\u00f1o del Carmen", "Pivijay", "Plato", "Pueblo Viejo", "Remolino", "Sabanas de San \u00c1ngel", "Salamina", "San Sebasti\u00e1n de Buenavista", "San Zen\u00f3n", "Santa Ana", "Santa B\u00e1rbara de Pinto", "Santa Marta", "Sitionuevo", "Tenerife", "Zapay\u00e1n", "Zona Bananera" ],
 	meta: [ "Acac\u00edas", "Barranca de Up\u00eda", "Cabuyaro", "Castilla la Nueva", "Cubarral", "Cumaral", "El Calvario", "El Castillo", "El Dorado", "Fuente de Oro", "Granada", "Guamal", "La Macarena", "La Uribe", "Lejan\u00edas", "Mapirip\u00e1n", "Mesetas", "Puerto Concordia", "Puerto Gait\u00e1n", "Puerto Lleras", "Puerto L\u00f3pez", "Puerto Rico", "Restrepo", "San Carlos de Guaroa", "San Juan de Arama", "San Juanito", "San Mart\u00edn", "Villavicencio", "Vista Hermosa" ],
 	nariño: [ "Aldana", "Ancuy\u00e1", "Arboleda", "Barbacoas", "Bel\u00e9n", "Buesaco", "Chachag\u00fc\u00ed", "Col\u00f3n", "Consac\u00e1", "Contadero", "C\u00f3rdoba", "Cuaspud", "Cumbal", "Cumbitara", "El Charco", "El Pe\u00f1ol", "El Rosario", "El Tabl\u00f3n", "El Tambo", "Francisco Pizarro", "Funes", "Guachucal", "Guaitarilla", "Gualmat\u00e1n", "Iles", "Imu\u00e9s", "Ipiales", "La Cruz", "La Florida", "La Llanada", "La Tola", "La Uni\u00f3n", "Leiva", "Linares", "Los Andes", "Mag\u00fc\u00ed Pay\u00e1n", "Mallama", "Mosquera", "Nari\u00f1o", "Olaya Herrera", "Ospina", "Pasto", "Policarpa", "Potos\u00ed", "Providencia", "Puerres", "Pupiales", "Ricaurte", "Roberto Pay\u00e1n", "Samaniego", "San Bernardo", "San Jos\u00e9 de Alb\u00e1n", "San Lorenzo", "San Pablo", "San Pedro de Cartago", "Sandon\u00e1", "Santa B\u00e1rbara", "Santacruz", "Sapuyes", "Taminango", "Tangua", "Tumaco", "T\u00faquerres", "Yacuanquer" ],
-	norte de santander: [ "\u00c1brego", "Arboledas", "Bochalema", "Bucarasica", "C\u00e1chira", "C\u00e1cota", "Chin\u00e1cota", "Chitag\u00e1", "Convenci\u00f3n", "C\u00facuta", "Cucutilla", "Duran\u00eda", "El Carmen", "El Tarra", "El Zulia", "Gramalote", "Hacar\u00ed", "Herr\u00e1n", "La Esperanza", "La Playa de Bel\u00e9n", "Labateca", "Los Patios", "Lourdes", "Mutiscua", "Oca\u00f1a", "Pamplona", "Pamplonita", "Puerto Santander", "Ragonvalia", "Salazar de Las Palmas", "San Calixto", "San Cayetano", "Santiago", "Santo Domingo de Silos", "Sardinata", "Teorama", "Tib\u00fa", "Toledo", "Villa Caro", "Villa del Rosario" ],
+	norte_de_santander: [ "\u00c1brego", "Arboledas", "Bochalema", "Bucarasica", "C\u00e1chira", "C\u00e1cota", "Chin\u00e1cota", "Chitag\u00e1", "Convenci\u00f3n", "C\u00facuta", "Cucutilla", "Duran\u00eda", "El Carmen", "El Tarra", "El Zulia", "Gramalote", "Hacar\u00ed", "Herr\u00e1n", "La Esperanza", "La Playa de Bel\u00e9n", "Labateca", "Los Patios", "Lourdes", "Mutiscua", "Oca\u00f1a", "Pamplona", "Pamplonita", "Puerto Santander", "Ragonvalia", "Salazar de Las Palmas", "San Calixto", "San Cayetano", "Santiago", "Santo Domingo de Silos", "Sardinata", "Teorama", "Tib\u00fa", "Toledo", "Villa Caro", "Villa del Rosario" ],
 	putumayo: [ "Col\u00f3n", "Mocoa", "Orito", "Puerto As\u00eds", "Puerto Caicedo", "Puerto Guzm\u00e1n", "Puerto Legu\u00edzamo", "San Francisco", "San Miguel", "Santiago", "Sibundoy", "Valle del Guamuez", "Villagarz\u00f3n" ],
 	quindio: [ "Armenia", "Buenavista", "Calarc\u00e1", "Circasia", "C\u00f3rdoba", "Filandia", "G\u00e9nova", "La Tebaida", "Montenegro", "Pijao", "Quimbaya", "Salento" ],
 	risaralda: [ "Ap\u00eda", "Balboa", "Bel\u00e9n de Umbr\u00eda", "Dosquebradas", "Gu\u00e1tica", "La Celia", "La Virginia", "Marsella", "Mistrat\u00f3", "Pereira", "Pueblo Rico", "Quinch\u00eda", "Santa Rosa de Cabal", "Santuario" ],
-	san andres y providencia: [ "Providencia y Santa Catalina Islas", "San Andr\u00e9s" ],
+	san_andres_y_providencia: [ "Providencia y Santa Catalina Islas", "San Andr\u00e9s" ],
 	santander: [ "Aguada", "Albania", "Aratoca", "Barbosa", "Barichara", "Barrancabermeja", "Betulia", "Bol\u00edvar", "Bucaramanga", "Cabrera", "California", "Capitanejo", "Carcas\u00ed", "Cepit\u00e1", "Cerrito", "Charal\u00e1", "Charta", "Chima", "Chipat\u00e1", "Cimitarra", "Concepci\u00f3n", "Confines", "Contrataci\u00f3n", "Coromoro", "Curit\u00ed", "El Carmen de Chucur\u00ed", "El Guacamayo", "El Pe\u00f1\u00f3n", "El Play\u00f3n", "El Socorro", "Encino", "Enciso", "Flori\u00e1n", "Floridablanca", "Gal\u00e1n", "G\u00e1mbita", "Gir\u00f3n", "Guaca", "Guadalupe", "Guapot\u00e1", "Guavat\u00e1", "G\u00fcepsa", "Hato", "Jes\u00fas Mar\u00eda", "Jord\u00e1n", "La Belleza", "La Paz", "Land\u00e1zuri", "Lebrija", "Los Santos", "Macaravita", "M\u00e1laga", "Matanza", "Mogotes", "Molagavita", "Ocamonte", "Oiba", "Onzaga", "Palmar", "Palmas del Socorro", "P\u00e1ramo", "Piedecuesta", "Pinchote", "Puente Nacional", "Puerto Parra", "Puerto Wilches", "Rionegro", "Sabana de Torres", "San Andr\u00e9s", "San Benito", "San Gil", "San Joaqu\u00edn", "San Jos\u00e9 de Miranda", "San Miguel", "San Vicente de Chucur\u00ed", "Santa B\u00e1rbara", "Santa Helena del Op\u00f3n", "Simacota", "Suaita", "Sucre", "Surat\u00e1", "Tona", "Valle de San Jos\u00e9", "V\u00e9lez", "Vetas", "Villanueva", "Zapatoca" ],
 	sucre: [ "Buenavista", "Caimito", "Chal\u00e1n", "Colos\u00f3", "Corozal", "Cove\u00f1as", "El Roble", "Galeras", "Guaranda", "La Uni\u00f3n", "Los Palmitos", "Majagual", "Morroa", "Ovejas", "Sampu\u00e9s", "San Antonio de Palmito", "San Benito Abad", "San Juan de Betulia", "San Marcos", "San Onofre", "San Pedro", "Sinc\u00e9", "Sincelejo", "Sucre", "Tol\u00fa", "Tol\u00fa Viejo" ],
 	tolima: [ "Alpujarra", "Alvarado", "Ambalema", "Anzo\u00e1tegui", "Armero", "Ataco", "Cajamarca", "Carmen de Apical\u00e1", "Casabianca", "Chaparral", "Coello", "Coyaima", "Cunday", "Dolores", "El Espinal", "Fal\u00e1n", "Flandes", "Fresno", "Guamo", "Herveo", "Honda", "Ibagu\u00e9", "Icononzo", "L\u00e9rida", "L\u00edbano", "Mariquita", "Melgar", "Murillo", "Natagaima", "Ortega", "Palocabildo", "Piedras", "Planadas", "Prado", "Purificaci\u00f3n", "Rioblanco", "Roncesvalles", "Rovira", "Salda\u00f1a", "San Antonio", "San Luis", "Santa Isabel", "Su\u00e1rez", "Valle de San Juan", "Venadillo", "Villahermosa", "Villarrica" ],
-	valle del cauca: [ "Alcal\u00e1", "Andaluc\u00eda", "Ansermanuevo", "Argelia", "Bol\u00edvar", "Buenaventura", "Buga", "Bugalagrande", "Caicedonia", "Cali", "Calima", "Candelaria", "Cartago", "Dagua", "El \u00c1guila", "El Cairo", "El Cerrito", "El Dovio", "Florida", "Ginebra", "Guacar\u00ed", "Jamund\u00ed", "La Cumbre", "La Uni\u00f3n", "La Victoria", "Obando", "Palmira", "Pradera", "Restrepo", "Riofr\u00edo", "Roldanillo", "San Pedro", "Sevilla", "Toro", "Trujillo", "Tulu\u00e1", "Ulloa", "Versalles", "Vijes", "Yotoco", "Yumbo", "Zarzal" ],
+	valle_del_cauca: [ "Alcal\u00e1", "Andaluc\u00eda", "Ansermanuevo", "Argelia", "Bol\u00edvar", "Buenaventura", "Buga", "Bugalagrande", "Caicedonia", "Cali", "Calima", "Candelaria", "Cartago", "Dagua", "El \u00c1guila", "El Cairo", "El Cerrito", "El Dovio", "Florida", "Ginebra", "Guacar\u00ed", "Jamund\u00ed", "La Cumbre", "La Uni\u00f3n", "La Victoria", "Obando", "Palmira", "Pradera", "Restrepo", "Riofr\u00edo", "Roldanillo", "San Pedro", "Sevilla", "Toro", "Trujillo", "Tulu\u00e1", "Ulloa", "Versalles", "Vijes", "Yotoco", "Yumbo", "Zarzal" ],
 	vaupes: [ "Carur\u00fa", "Mit\u00fa", "Taraira" ],
 	vichada: [ "Cumaribo", "La Primavera", "Puerto Carre\u00f1o", "Santa Rosal\u00eda"]
 }
-
-//IMPORTANTE: No se muestran departamentos y ciudades en el formulario debido a que hay una gran cantidad de datos en la lista
 
 function cargarDepartamentos() {
 	addOptions("departamento", array);
@@ -78,6 +86,79 @@ function cargarCiudades() {
 
 }
 
-window.onload = cargarDepartamentos;
-// Se cargan los departamentos para comprobar que funciona
-//cargarDepartamentos();
+window.onload = () => {
+	usuario = document.getElementById("correo");
+	contraseña = document.getElementById("contrasena");
+	userName = document.getElementById("correo2");
+	userPw = document.getElementById("contrasena2");
+	cargarDepartamentos();
+	cargarregistro();
+}
+cargarlogin();
+
+function cargarregistro() {
+	const datos = document.getElementById('form-register');
+	datos.addEventListener('submit', function (event) {
+		event.preventDefault();
+		GuardarLocalStorage();
+		location.href = '../html/login.html';
+	});
+}
+
+function GuardarLocalStorage() {
+	control = true;
+	let ListaUsuarios = JSON.parse(localStorage.getItem("lista"));
+	if (ListaUsuarios != null) {
+		//validar usario unico
+		var temporal = ListaUsuarios.length;
+		for (var i = 0; i < temporal; i++) {
+			if (usuario.value == ListaUsuarios[i].usuario) {
+				alert('El usuario ' + usuario.value + ' ya existe');
+				control = false;
+				break;
+			}
+		}
+	}
+	if (control != false) {
+		let persona = {
+			usuario: usuario.value,
+			contraseña: contraseña.value,
+		};
+		oldInfo = JSON.parse(localStorage.getItem("lista"));
+		if (!(oldInfo instanceof Array)) {
+			oldInfo = [];
+			oldInfo.push(persona);
+			localStorage.setItem("lista", JSON.stringify(oldInfo));
+		} else {
+			oldInfo.push(persona);
+			localStorage.setItem("lista", JSON.stringify(oldInfo));
+		}
+		document.forms[0].reset(); // limpliar el formulario
+	}
+}
+
+function Verificar() {
+	if (localStorage.getItem("lista")) {
+		//existe lista en le local storage
+		var variable = 1;
+		let ListaUsuarios = JSON.parse(localStorage.getItem("lista"));
+		var temporal = ListaUsuarios.length;
+		for (var i = 0; i < temporal; i++) {
+			if (userName.value == ListaUsuarios[i].usuario && userPw.value == ListaUsuarios[i].contraseña) {
+				variable = -1;
+				location.href = '../html/content.html';
+				break;
+			}
+		}
+		if (variable == 1) {
+			alert('Error en el login');
+			return false;
+		} else if (variable = -1) {
+			//alert('Has iniciado sesion');
+			return true;
+		}
+	} else {
+		return false;
+		alert('Error: No hay entradas en el local storage');
+	}
+}
